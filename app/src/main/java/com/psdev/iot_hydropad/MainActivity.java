@@ -17,6 +17,7 @@ import com.google.firebase.database.*;
 import android.widget.TextView;
 import com.psdev.iot_hydropad.NotificationTank;
 import com.psdev.iot_hydropad.NotificationPH;
+import com.psdev.iot_hydropad.NotificationTurbidity;
 
 
 
@@ -80,6 +81,7 @@ public class MainActivity extends AppCompatActivity {
         statusIoT = findViewById(R.id.statusIoT);
         notificationTank = new NotificationTank(this);
         NotificationPH notificationPH = new NotificationPH(this);
+        NotificationTurbidity notificationTurbity = new NotificationTurbidity(this);
 
 
 
@@ -149,6 +151,7 @@ public class MainActivity extends AppCompatActivity {
                 if (value != null && estado) {
                     speedTurbuidez.setMaxSpeed(50);
                     speedTurbuidez.speedTo(value, 0);
+                    notificationTurbity.sendNotification(value);
                 } else {
                     speedTurbuidez.speedTo(0, 0);
                 }
@@ -270,29 +273,9 @@ public class MainActivity extends AppCompatActivity {
             }
         });
 
-        Button button2 = findViewById(R.id.btn_stop);
-        button2.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (button2.getText().equals("Off")) {
-                    button2.setText("On");
-                } else {
-                    button2.setText("Off");
-                }
-            }
-        });
 
-        Button button3 = findViewById(R.id.btn_reset);
-        button3.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                if (button3.getText().equals("Off")) {
-                    button3.setText("On");
-                } else {
-                    button3.setText("Off");
-                }
-            }
-        });
+
+
         handler.post(runnable);
 
     }

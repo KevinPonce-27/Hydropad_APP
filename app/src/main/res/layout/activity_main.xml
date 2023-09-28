@@ -224,33 +224,16 @@
 
         <Button
             android:id="@+id/btn_start"
-            android:layout_width="wrap_content"
+            android:layout_width="141dp"
             android:layout_height="wrap_content"
             android:layout_below="@id/distanciaTextView"
-            android:layout_marginTop="10dp"
-            android:layout_marginEnd="34dp"
-            android:layout_toStartOf="@+id/btn_reset"
+            android:layout_alignParentStart="true"
+            android:layout_alignParentEnd="true"
+
+            android:layout_marginStart="128dp"
+            android:layout_marginTop="9dp"
+            android:layout_marginEnd="132dp"
             android:text="Manual" />
-
-        <Button
-            android:id="@+id/btn_reset"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/distanciaTextView"
-            android:layout_centerHorizontal="true"
-            android:layout_marginTop="10dp"
-            android:text="On" />
-
-        <Button
-            android:id="@+id/btn_stop"
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:layout_below="@id/distanciaTextView"
-            android:layout_marginStart="35dp"
-            android:layout_marginTop="10dp"
-            android:layout_toEndOf="@+id/btn_reset"
-            android:text="On" />
-
 
     </RelativeLayout>
 
