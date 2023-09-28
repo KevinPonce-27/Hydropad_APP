@@ -109,7 +109,7 @@ public class MainActivity extends AppCompatActivity {
                     speedTanque.setMaxSpeed(100);
                     speedTanque.setSpeedAt(value);
                     speedTanque.setUnit("%");
-                    notificationTank.sendNotification();
+                    notificationTank.sendNotification(value);
 
                     if (value < 10) { // Si el valor es menor que el 10%
                         if (mediaPlayer == null) {
