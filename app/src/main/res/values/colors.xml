@@ -1,0 +1,12 @@
+<!-- res/values/colors.xml -->
+<resources>
+    <color name="colorPressed">#0048FF</color> <!-- Color cuando está presionado -->
+    <color name="colorSelected">#FF00C8</color> <!-- Color cuando está seleccionado -->
+    <color name="colorDefault">#FFDEAD</color>
+    <color name="defaultColor">#673AB7</color>
+    <color name="someColor">#0087F0</color>
+    <color name="someOtherColor">#053DE7</color>
+    <color name="anotherColor">#E45F55</color> <!-- Color por defecto -->
+    <color name="red">#FF0000</color> <!-- Rojo -->
+    <color name="green">#249429</color> <!-- Verde -->
+</resources>

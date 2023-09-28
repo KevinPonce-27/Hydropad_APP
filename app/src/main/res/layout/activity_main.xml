@@ -1,0 +1,292 @@
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:id="@+id/header"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:background="@drawable/encabezado_degradable"
+        android:gravity="center_vertical"
+        android:orientation="horizontal">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:id="@+id/icon"
+                android:layout_width="41dp"
+                android:layout_height="29dp"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="22dp"
+                android:contentDescription="@string/menu_icon_description"
+                android:src="@mipmap/ic_launcher_round" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:text="HydroPad APP"
+                android:textColor="#FFFFFF"
+                android:textSize="20sp"
+                android:textStyle="bold" />
+        </RelativeLayout>
+    </RelativeLayout>
+    <TextView
+        android:id="@+id/subHeader"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/header"
+        android:gravity="center"
+        android:padding="10dp"
+        android:text="Real-time data"
+        android:textSize="18sp"
+        android:textStyle="bold" />
+
+    <LinearLayout
+        android:id="@+id/velocimetersLayout"
+        android:layout_width="match_parent"
+        android:layout_height="490dp"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="60dp"
+        android:orientation="horizontal">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="490dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="40dp">
+
+            <!-- Primer Velocímetro: Tanque -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/textViewTanque"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:layout_centerVertical="true"
+                        android:text="Tank"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <com.github.anastr.speedviewlib.TubeSpeedometer
+                    android:id="@+id/speedTanque"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    app:sv_speedTextFormat="INTEGER"
+                    app:sv_unit="" />
+            </LinearLayout>
+
+            <!-- Segundo Velocímetro: Temperatura -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="30dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/textViewTemperatura"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Temp"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <com.github.anastr.speedviewlib.TubeSpeedometer
+                    android:id="@+id/speedTemperatura"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    app:sv_speedTextFormat="INTEGER"
+                    app:sv_unit="" />
+            </LinearLayout>
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="490dp"
+            android:layout_weight="1"
+            android:gravity="center_horizontal"
+            android:orientation="vertical"
+            android:paddingTop="40dp">
+
+            <!-- Tercer Velocímetro: Turbidez -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/textViewTurbuidez"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="Turbidity"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <com.github.anastr.speedviewlib.TubeSpeedometer
+                    android:id="@+id/speedTurbuidez"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    app:sv_speedTextFormat="INTEGER"
+                    app:sv_unit="" />
+            </LinearLayout>
+
+            <!-- Cuarto Velocímetro: pH -->
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:gravity="center_horizontal"
+                android:orientation="vertical"
+                android:paddingTop="30dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:gravity="center_vertical">
+
+                    <TextView
+                        android:id="@+id/textViewPh"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerVertical="true"
+                        android:text="pH"
+                        android:textSize="18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <com.github.anastr.speedviewlib.TubeSpeedometer
+                    android:id="@+id/speedpH"
+                    android:layout_width="170dp"
+                    android:layout_height="170dp"
+                    app:sv_speedTextFormat="INTEGER"
+                    app:sv_unit="" />
+            </LinearLayout>
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/buttonLayout"
+        android:layout_width="match_parent"
+        android:layout_height="93dp"
+        android:layout_below="@id/velocimetersLayout"
+        android:padding="10dp">
+
+        <TextView
+            android:id="@+id/distanciaTextView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:text=""
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+        <Button
+            android:id="@+id/btn_start"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/distanciaTextView"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="34dp"
+            android:layout_toStartOf="@+id/btn_reset"
+            android:text="Manual" />
+
+        <Button
+            android:id="@+id/btn_reset"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/distanciaTextView"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="10dp"
+            android:text="On" />
+
+        <Button
+            android:id="@+id/btn_stop"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/distanciaTextView"
+            android:layout_marginStart="35dp"
+            android:layout_marginTop="10dp"
+            android:layout_toEndOf="@+id/btn_reset"
+            android:text="On" />
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/buttonLayout"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:padding="10dp">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Status IoT:"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+        <TextView
+            android:id="@+id/statusIoT"
+            android:layout_width="50dp"
+            android:layout_height="25dp"
+            android:layout_marginStart="10dp"
+            android:background="@drawable/circle_indicator_off"
+            android:gravity="center"
+            android:textColor="#FFFFFF"
+            android:textSize="16sp" />
+
+    </LinearLayout>
+</RelativeLayout>
+
+
+
+
+
+
+
+
+

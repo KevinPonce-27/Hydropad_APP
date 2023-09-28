@@ -1,0 +1,5 @@
+<resources>
+    <string name="app_name">HydroPad</string>
+    <string name="channel_name">Canal de Notificación de Tanque</string>
+    <string name="channel_description">Notificaciones cuando el nivel del tanque está al 10%</string>
+</resources>

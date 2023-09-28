@@ -1,0 +1,77 @@
+{
+  "project_info": {
+    "project_number": "819632060551",
+    "firebase_url": "https://hydropad-c1a22-default-rtdb.firebaseio.com",
+    "project_id": "hydropad-c1a22",
+    "storage_bucket": "hydropad-c1a22.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:819632060551:android:4c9d90bda1277f21bae022",
+        "android_client_info": {
+          "package_name": "com.example.apphydropad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "819632060551-ogsh5esnig9sh12t3emevic0m0vva6ck.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZmWw1yOcS1-h6QPPb6jtw5NdVdxDEs1E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "819632060551-9qfj5b615elojff73tbvoiu4la2rtiv9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:819632060551:android:7f63a43f6904333fbae022",
+        "android_client_info": {
+          "package_name": "com.psdev.iot_hydropad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "819632060551-s2549cdgl4afuuhasrefcdse60dml4pt.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.psdev.iot_hydropad",
+            "certificate_hash": "60a79ba2f9f15f85c2c2b0a85ea489e2ea4a208c"
+          }
+        },
+        {
+          "client_id": "819632060551-ogsh5esnig9sh12t3emevic0m0vva6ck.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCZmWw1yOcS1-h6QPPb6jtw5NdVdxDEs1E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "819632060551-9qfj5b615elojff73tbvoiu4la2rtiv9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
