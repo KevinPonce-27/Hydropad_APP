@@ -16,6 +16,7 @@ import com.google.android.gms.tasks.OnSuccessListener;
 import com.google.firebase.database.*;
 import android.widget.TextView;
 import com.psdev.iot_hydropad.NotificationTank;
+import com.psdev.iot_hydropad.NotificationPH;
 
 
 
@@ -78,6 +79,8 @@ public class MainActivity extends AppCompatActivity {
         setContentView(R.layout.activity_main);
         statusIoT = findViewById(R.id.statusIoT);
         notificationTank = new NotificationTank(this);
+        NotificationPH notificationPH = new NotificationPH(this);
+
 
 
 
@@ -192,6 +195,8 @@ public class MainActivity extends AppCompatActivity {
                     speedpH.setMinSpeed(1);
                     speedpH.setMaxSpeed(14);
                     speedpH.speedTo(value, 0);
+                    notificationPH.sendNotification(value); // reemplaza phLevel con la variable que tiene el nivel de pH
+
                 } else {
                     speedpH.speedTo(0, 0);
                 }
